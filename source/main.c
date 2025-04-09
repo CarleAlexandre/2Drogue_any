@@ -1,5 +1,4 @@
 #include <raylib.h>
-#include <vector>
 
 #define WORLD_SIZE 4000000
 
@@ -19,13 +18,14 @@ typedef struct {
 }	entity;
 
 typedef struct {
-	int			tiles[WORLD_SIZE];
-	std::vector<entity>	entities;
+	int	tiles[WORLD_SIZE];
+	entity	*entities;
 }	world;
 
 int main(void) {
 	Camera2D	camera;
 	entity		player;
+	world		world;
 
 	InitAudioDevice();
 	InitWindow(800, 800, "Chaos Dungeon");
