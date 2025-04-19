@@ -23,9 +23,9 @@ typedef struct {
 }	world;
 
 int main(void) {
-	Camera2D	camera;
-	entity		player;
-	world		world;
+	Camera2D	camera = {0};
+	entity		player = {0};
+	//world		world = {0};
 
 	InitAudioDevice();
 	InitWindow(800, 800, "Chaos Dungeon");
